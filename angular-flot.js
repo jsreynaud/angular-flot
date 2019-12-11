@@ -101,7 +101,7 @@ angular.module('angular-flot', []).directive('flot', ['$timeout', function ($tim
           });
         });
       });
-      
+
       plotArea.on('plotunselected', function onPlotUnselected (event) {
         $timeout(function onApplyPlotUnselected () {
           scope.onPlotUnselected({
@@ -164,8 +164,8 @@ angular.module('angular-flot', []).directive('flot', ['$timeout', function ($tim
         plotArea.off('plothover');
         plotArea.off('plotselected');
         plotArea.off('unplotselected');
-
-        plot.destroy();
+        // Quick Fix
+        //plot.destroy();
         unwatchDataset();
         unwatchOptions();
       });
